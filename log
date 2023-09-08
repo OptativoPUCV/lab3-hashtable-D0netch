@@ -77,3 +77,29 @@ Fri 08 Sep 2023 02:41:28 PM UTC:
  tests:  8|3
 total_score: 40/70
 1e4cdc6
+Fri 08 Sep 2023 02:46:23 PM UTC: 
+ hashmap.c | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:75:35: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘capaciti’; did you mean ‘capacity’?
+   75 |   long positions = hash(key, map->capaciti);
+      |                                   ^~~~~~~~
+      |                                   capacity
+hashmap.c:76:23: error: ‘position’ undeclared (first use in this function); did you mean ‘positions’?
+   76 |   while (map->buckets[position] != NULL) {
+      |                       ^~~~~~~~
+      |                       positions
+hashmap.c:76:23: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:79:18: error: expected ‘;’ before ‘return’
+   79 |       map->size--
+      |                  ^
+      |                  ;
+   80 |       return;
+      |       ~~~~~~      
+hashmap.c:75:8: error: unused variable ‘positions’ [-Werror=unused-variable]
+   75 |   long positions = hash(key, map->capaciti);
+      |        ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0f7d589
