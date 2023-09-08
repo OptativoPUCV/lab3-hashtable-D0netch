@@ -103,7 +103,7 @@ Pair * firstMap(HashMap * map) {
     }
 
     if (map->current < map->capacity) {
-        return map->buckets[map->current]
+        return map->buckets[map->current];
     } else {
         return NULL;
     }
