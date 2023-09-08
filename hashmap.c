@@ -110,6 +110,15 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
+    map->current++;
 
-    return NULL;
+    while (map->current < map->capacity && map->buckets[map->current] == NULL) {
+        map->current++;
+    }
+
+    if (map->current < map->capacity) {
+        return map->buckets[map->current];
+    } else {
+        return NULL;
+    }
 }
