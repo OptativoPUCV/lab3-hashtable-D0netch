@@ -151,3 +151,20 @@ hashmap.c:114:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 abc0ee4
+Fri 08 Sep 2023 03:09:23 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c:112:8: error: redefinition of ‘nextMap’
+  112 | Pair * nextMap(HashMap * map) {
+      |        ^~~~~~~
+hashmap.c:98:8: note: previous definition of ‘nextMap’ with type ‘Pair *(HashMap *)’ {aka ‘Pair *(struct HashMap *)’}
+   98 | Pair * nextMap(HashMap * map) {
+      |        ^~~~~~~
+hashmap.c: In function ‘nextMap’:
+hashmap.c:114:1: error: control reaches end of non-void function [-Werror=return-type]
+  114 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c287172
