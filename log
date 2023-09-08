@@ -42,3 +42,16 @@ hashmap.c:49:39: note: previous implicit declaration of ‘_strdup’ with type 
 cc1: all warnings being treated as errors
 Compilation failed
 d8ceeaf
+Fri 08 Sep 2023 02:33:23 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:14: error: expected ‘;’ before ‘map’
+   50 |   map->size++
+      |              ^
+      |              ;
+   51 |   map->current = position;
+      |   ~~~         
+Compilation failed
+428e329
