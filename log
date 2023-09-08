@@ -55,3 +55,13 @@ hashmap.c:50:14: error: expected ‘;’ before ‘map’
       |   ~~~         
 Compilation failed
 428e329
+Fri 08 Sep 2023 02:33:33 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:50:13: error: expected expression before ‘;’ token
+   50 |   map->size+;
+      |             ^
+Compilation failed
+0948f58
